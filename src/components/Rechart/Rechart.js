@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Rechart = () => {
@@ -11,8 +12,13 @@ const Rechart = () => {
     
     return (
         <div>
-           <LineChart width={500}
-          height={300}
+          <Container>
+              <Row>
+                  <Col md="6">
+                      <h2 className='py-5'>Invest vs sell</h2>
+                     
+                  <LineChart width={500}
+          height={400}
           data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
@@ -23,9 +29,12 @@ const Rechart = () => {
           <Line type="monotone" dataKey="sell" stroke="#82ca9d" fill="#8884d8" />
 
            </LineChart>
+                  
+                  </Col>
 
-          
-        <BarChart width={500} height={400} data={data}>
+                  <Col md="6">
+                  <h2  className='py-5'>Invest vs sell</h2>
+                  <BarChart width={500} height={400} data={data}>
           <Bar dataKey="investment" fill="#8884d8" />
           <XAxis dataKey="month" />
           <YAxis />
@@ -34,6 +43,9 @@ const Rechart = () => {
           
           <Bar dataKey="sell" stackId="a" fill="#82ca9d" />
         </BarChart>
+                  </Col>
+              </Row>
+          </Container>
       
         </div>
     );
