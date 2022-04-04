@@ -1,4 +1,5 @@
-
+my live website link is : https://furniture80.netlify.app/;
+my repository link is : https://github.com/programming-hero-web-course-4/product-analysis-website-RidoyMia;
 
 .* এই ওয়েবসাইট এ একটা ফার্নিচার এর কাজ নিয়ে করা 
 .* এখানে ফার্নিচার এর একটা ফটো আচে 
